@@ -1,0 +1,65 @@
+.background-slide-animation {
+  padding-bottom: 300px;
+  background-position: center center;
+  background-image: url(http://lorempixel.com/900/300/?4);
+  -webkit-animation: effect-images-animation 41s linear infinite;
+  animation: effect-images-animation 41s linear infinite;
+}
+@-webkit-keyframes effect-images-animation {
+  0% {
+    background-image: url(http://lorempixel.com/900/300/?4);
+  }
+  0.6097561% {
+    background-image: url(http://lorempixel.com/900/300/?1);
+  }
+  25% {
+    background-image: url(http://lorempixel.com/900/300/?1);
+  }
+  25.6097561% {
+    background-image: url(http://lorempixel.com/900/300/?2);
+  }
+  50% {
+    background-image: url(http://lorempixel.com/900/300/?2);
+  }
+  50.6097561% {
+    background-image: url(http://lorempixel.com/900/300/?3);
+  }
+  75% {
+    background-image: url(http://lorempixel.com/900/300/?3);
+  }
+  75.6097561% {
+    background-image: url(http://lorempixel.com/900/300/?4);
+  }
+  100% {
+    background-image: url(http://lorempixel.com/900/300/?4);
+  }
+}
+@keyframes effect-images-animation {
+  0% {
+    background-image: url(http://lorempixel.com/900/300/?4);
+  }
+  0.6097561% {
+    background-image: url(http://lorempixel.com/900/300/?1);
+  }
+  25% {
+    background-image: url(http://lorempixel.com/900/300/?1);
+  }
+  25.6097561% {
+    background-image: url(http://lorempixel.com/900/300/?2);
+  }
+  50% {
+    background-image: url(http://lorempixel.com/900/300/?2);
+  }
+  50.6097561% {
+    background-image: url(http://lorempixel.com/900/300/?3);
+  }
+  75% {
+    background-image: url(http://lorempixel.com/900/300/?3);
+  }
+  75.6097561% {
+    background-image: url(http://lorempixel.com/900/300/?4);
+  }
+  100% {
+    background-image: url(http://lorempixel.com/900/300/?4);
+  }
+}
