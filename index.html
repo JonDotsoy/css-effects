@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Effects with CSS3</title>
+    <style>
+    .content {
+        width: 900px;
+        margin: auto;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .row {
+        display: block;
+    }
+    .col {
+        width: 48%;
+        float: left;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .col p {
+        text-align: justify;
+    }
+    @media (max-width: 900px) {
+        .content {
+            width: 100%;
+        }
+        .col {
+            width: 100%;
+        }
+    }
+    </style>
+
+	<link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="row">
+            <div class="col">
+                <h1>Background Slides Animate</h1>
+            </div>
+            <div class="col background-slide-animation"></div>
+        </div>
+    </div>
+</body>
+
+</html>

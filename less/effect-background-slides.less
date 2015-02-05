@@ -1,0 +1,43 @@
+.transition-back-images (@images; @time-per-slide: 3s; @effect-time: .25s; @name-effect: effect-images-animation) {
+
+	@number-of-slides: length(@images);
+	@loop-duration: ( (@number-of-slides * @time-per-slide) + (@number-of-slides * @effect-time) );
+
+	@start-porcentage-effect: percentage(@effect-time / @loop-duration);
+	@end-porcentage-effect: percentage((@effect-time + @time-per-slide) / @loop-duration);
+
+	& {
+		background-position: center center;
+		background-image: extract(@images, @number-of-slides);
+		animation: @name-effect @loop-duration linear infinite;
+	}
+
+	@keyframes @name-effect {
+		.loop(@index; @before-porcentage)
+			when (@index < @number-of-slides)
+		{
+
+			@image: extract(@images, @index + 1);
+			@first-image: extract(@images, 1);
+			@last-image: extract(@images, @number-of-slides);
+
+			@first-porcentage: @before-porcentage + @start-porcentage-effect;
+			@second-porcentage: @before-porcentage + @end-porcentage-effect;
+
+			0% when (@index = 0) {
+				background-image: @last-image;
+			}
+
+			@{first-porcentage} {
+				background-image: @image;
+			}
+
+			@{second-porcentage} {
+				background-image: @image;
+			}
+
+			.loop(@index + 1; @second-porcentage);
+		}
+		.loop(0; 0%);
+	}
+}

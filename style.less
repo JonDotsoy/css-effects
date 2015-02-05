@@ -1,0 +1,16 @@
+@import (less) "less/effect-background-slides";
+
+.background-slide-animation {
+	// position: relative;
+	// background-size: 100% auto;
+	padding-bottom: 300px;
+	@images:
+		url(http://lorempixel.com/900/300/?1),
+		url(http://lorempixel.com/900/300/?2),
+		url(http://lorempixel.com/900/300/?3),
+		url(http://lorempixel.com/900/300/?4)
+		;
+	.transition-back-images(@images; 10s; .25s);
+	// @images: 1 ,2 ,3 ,4;
+	// .transition-back-images(@images);
+}
